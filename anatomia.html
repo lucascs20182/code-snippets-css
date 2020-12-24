@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Anatomia CSS</title>
+        <style>
+            /* o padrão de nomenclatura do CSS é dash-case */
 
-<head>
-    <meta charset="UTF-8">
-    <title>Anatomia CSS</title>
-    <style>
-        /* ... */
-    </style>
-</head>
+            .seletor {
+                color: #fff;
+                font-size: 30px;
+                text-align: center;
 
-<body>
-    <div class="selector">Conteúdo</div>
-</body>
+                border: solid 5px navy; /* shorthand property */
 
+                font-family: Arial, Helvetica, sans-serif;
+                width: calc(100% - 40px);
+                background-color: rgb(34, 153, 189);
+            }
+
+            /* pseudo-classe */
+            .seletor:hover {
+                background-color: orangered;
+            }
+
+            /* pseudo-elemento */
+            .seletor::first-letter {
+                font-size: 60px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="seletor">Conteúdo</div>
+    </body>
 </html>
