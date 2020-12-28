@@ -5,7 +5,35 @@
     <meta charset="UTF-8">
     <title>Especificidade CSS</title>
     <style>
-        /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+        /*
+            ordem de especificidade:
+            
+            1. regra com !important
+            2. seletores mais específicos
+            3. última regra processada (empate)
+         */
+
+        .observacao {
+            /* não subscreve o background de p.observacao
+                mesmo com !important, porque background-color != background */
+            background-color: #5f5!important;
+
+            border: dashed 5px;
+            padding: 200px!important;
+            font-size: 40px;
+        }
+
+        /* não subscreve o estilo aplicado acima
+            por ter menor especificidade */
+        p {
+            background-color: #aaa;
+        }
+
+        /* mais específico do que a classe */
+        p.observacao {
+            padding: 2px;
+            background: linear-gradient(to right, red, yellow);
+        }
     </style>
 </head>
 
