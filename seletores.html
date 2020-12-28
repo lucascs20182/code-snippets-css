@@ -6,7 +6,135 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*
+
+            * {
+                color: #ff0;
+                background-color: #f77;
+            } 
+        
+        */
+
+
+        /* .tag {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* não vai selecionar nada porque não há uma section 
+            childNodes[0] da div #aninhado */
+        /* #aninhado > section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* selecione a ul que vem diretamente depois de p */
+        /* p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* não vai funcionar por não serem elementos adjacentes */
+        /* p + ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* seleciona o elemento ol que tem um irmão anterior
+            p; filhos do mesmo pai */
+        /* p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* procura todos os elementos que têm a propriedade feira */
+        /* [feira] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* elementos que tem a prop feira tem o valor casa */
+        /* [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* elementos que tem a prop feira e tem o valor 'casa'
+            contido na string completa de valores, separados por espaço */
+        /* [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* seleciona todos os elementos com a prop feira
+            e que possui 'sa' dentro do valor da prop */
+        /* [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* o primeiro filho de alguém que é do tipo span */
+        /* span:nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* dentro de uma section selecione todos
+            os filhos ímpares */
+        /* section > :nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* dentro de uma section selecione todos
+            os filhos pares */
+        /* section > :nth-child(even) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* elementos pares dentro de uma section e qualquer ul */
+        /* section > :nth-child(odd), ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* o label dos elementos pares dentro de uma section */
+        /* section > :nth-child(odd) label {
+            color: #ff0;
+            background-color: #f77;
+        } */
     </style>
 </head>
 
@@ -29,7 +157,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
