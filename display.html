@@ -5,7 +5,50 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        div {
+            background-color: seagreen;
+        }
+
+        span {
+            background-color: dodgerblue;
+        }
+
+        li {
+            background-color: purple;
+        }
+
+        div, span, li {
+            /* não funciona em elementos com display inline 
+                estilo do span por padrão */
+            width: 50%;
+            width: 200px; /* ignorado no display inline */
+            
+            height: 80px; /* ignorado no display inline */
+            
+            padding-top: 30px;
+            
+            text-align: center;
+
+            /* no block, cada elemento tem a sua própria linha */
+            display: block;
+
+            /* os elementos ficam na mesma linha */
+            display: inline;
+
+            /* elementos na mesma linha 
+                considerando props como altura e largura */
+            display: inline-block;
+        }
     </style>
 </head>
 
