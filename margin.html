@@ -27,6 +27,10 @@
             margin-top: 30px;
         }
 
+        /*  como evitar margin collapse? 
+            uma das possibilidades é com float
+         */
+         
         /* 
             float: left / right
             position: absolute
@@ -36,9 +40,15 @@
 </head>
 
 <body>
+    <!-- margin collapse entre conteúdo 1 e 2 
+        efeito de sobreposição de margins -->
     <div class="m30">Conteúdo 1</div>
+
     <div class="m30" style="border: none"></div>
+
     <div class="m30">Conteúdo 2</div>
+
+    <!-- margin collapse -->
     <div class="mb30">Conteúdo 3</div>
     <div class="mt30">Conteúdo 4</div>
 </body>
