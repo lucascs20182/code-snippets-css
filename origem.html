@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+        body {
+            background-color: aquamarine;
+        }
     </style>
+
+    <!-- prioridade por ordem de procedência -->
+    <link rel="stylesheet" href="./css/externo.css"> <!-- rel: relação  -->
 </head>
 
-<body>
+<body style="background-color: coral;"> <!-- maior prioridade -->
     <h1>E agora?</h1>
 </body>
 
