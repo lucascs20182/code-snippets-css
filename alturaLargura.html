@@ -5,9 +5,22 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html {
+            height: 100%;
+        }
+
         body {
             font-size: 40px;
             background-color: coral;
+            
+            /*  a tag html também não considera
+                a altura inteira da página
+                a menos que esteja considerando 100%
+                da altura do viewport
+             */
+            height: 100%;
+
+            margin: 0;
         }
 
         div {
@@ -17,12 +30,33 @@
         span {
             background-color: dodgerblue;
         }
+
+        span, div {
+            /*  o body por padrão já ocupa o tamanho
+                da horizontal inteira da página
+             */
+            width: 50%;
+
+            /* unidades absolutas aumentam o tamanho do body */
+            height: 250px;
+            
+            /*  tanto a div quanto o span estão no body
+                logo, 50% do body
+                a altura do body não é da página inteira
+                mas sim a soma da altura do span + div + margin etc
+             */
+            height: 50%; /* para o span não faz diferença; elemento inline */
+
+            display: block;
+
+            display: inline-block;
+        }
     </style>
 </head>
 
 <body>
-    <div>Título</div>
-    <span>Subtítulo</span>
+    <div>Título</div><!-- resolve o 'bug' do inline-block
+    --><span>Subtítulo</span>
 </body>
 
 </html>
