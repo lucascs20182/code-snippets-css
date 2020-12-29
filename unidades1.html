@@ -5,7 +5,59 @@
     <meta charset="UTF-8">
     <title>Unidades #01</title>
     <style>
-        /* ... */
+        .unidades-absolutas {
+            position: absolute;
+
+            /* funcionam por causa da position: absolute */
+            top: 150px;
+            left: 200px;
+            
+            /*  O px do css não é um px físico da sua máquina
+                mas sim uma normalização
+                
+                É a única unidade absoluto comumente usada na web
+            */
+            font-size: 40px;
+            
+            padding: 20px;
+            border: solid 5px #222;
+            margin: 30px;
+
+            width: 150px;
+            height: 75px;           
+        }
+
+        .unidades-relativas {
+            position: absolute;
+
+            /*  O em funciona em relação ao elemento pai
+                nesse caso a div está no próprio body
+                
+                "2em significa 2x a fonte do body" 
+            */
+            font-size: 4em;
+
+            padding: 5%;
+
+            /*  vw: 1% do tamanho do viewport da largura 
+                arraste a largura da janela para ver em ação
+            */
+            border: solid 1vw #222;
+
+            margin: .8%;
+            
+            /* 20% da largura do viewport */
+            width: 20vw;
+
+            /*  vh: 1% da altura do viewport
+                "10vh significa 10% da altura"
+                "100vh é a altura inteira" 
+            */
+            height: 15vh;
+
+            bottom: 5%;
+            right: 5%;
+        }
     </style>
 </head>
 

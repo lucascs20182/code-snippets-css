@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
     <title>Unidades #02</title>
     <style>
-        /* ... */
+        /* o percentual varia bastante dependendo da position */
+
+        .fora {
+            position: relative;
+            background-color: orange;
+            height: 400px;
+            width: 400px;
+            padding: 50px;
+        }
+
+        .dentro {
+            background-color: mediumvioletred;
+            
+            /* width já é 100% da largura do conteúdo por default (largura - padding) */
+            height: 100px;
+            
+            width: 100%;
+
+            position: static; /* position default; considera o tamanho do conteudo */
+            position: relative; /* tamanho do conteúdo */
+            position: absolute; /* tamanho do conteúdo + padding */
+            position: fixed; /* tamanho do viewport */
+        }
     </style>
 </head>
 <body>
