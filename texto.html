@@ -6,7 +6,6 @@
     <title>Texto</title>
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <style>
-        /* ... */
         * {
             margin: 0;
         }
@@ -15,6 +14,85 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+
+        html {
+            font-size: 28px;
+        }
+
+        div {
+            font-size: 50px;
+        }
+
+        /*  div é pai de p, logo as medidas com em terão
+            como base o tamanho de fonte da div 
+        */
+        p {
+            /* valores padrões */
+            font-size: 16px; /* se a fonte da raiz do browser for 16px (médio) */
+            font-size: 100%;
+            font-size: 1em;
+            font-size: 12pt;
+
+            /* unidades absolutas */
+            font-size: 100px;
+
+            /* unidades relativas (recomendado para fontes) */
+            font-size: 2.2em;
+
+            /* rem é em relação a fonte raiz da tag html
+            " 2rem significa 2x a fonte raiz" 
+            */
+            font-size: 2.2rem;
+
+
+
+            /* fonte padrão do browser pro tipo monospaçada */
+            font-family: monospace;
+
+            /*   se disponível, Georgia; se não estiver, 'Times
+                New Roman', se também não estiver disponível 'Times',
+                senão qualquer outra fonte disponível do tipo serifada
+            */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            /* fontes cursivas */
+            font-family: 'Indie Flower', cursive;
+
+
+
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+
+            /* primeira letra maiúscula */
+            text-transform: capitalize;
+
+            text-decoration: overline;
+            word-spacing: -50px;
+            letter-spacing: 20px;
+            line-height: 2.5em;
+
+            text-align: center;
+        }
+
+        .botao {
+            font-size: 28px;
+            text-decoration: none;
+            padding: 10px 30px;
+            border-radius: 25px;
+        }
+
+        .destaque {
+            color: #fff;
+            background: tomato;
+            box-shadow: 2px 2px 1px 1px #000;
+        }
+
+        .destaque:active {
+            box-shadow: none;
         }
     </style>
 </head>
