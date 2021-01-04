@@ -6,7 +6,63 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        div {
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big {
+            font-size: 1.5em;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: column; /* main axis default */
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: row;
+
+            width: 50%;
+
+            /* por default, quando os elementos
+            são maiores do que a largura acontece 
+            um overflow, com wrap acontece uma 
+            quebra de linha para manter os elementos
+            dentro da largura do flex-container */
+            flex-wrap: wrap; 
+
+            flex-wrap: wrap-reverse;
+
+            height: 200px;
+
+            /* shorthand de flex-direction com wrap */
+            flex-flow: column-reverse wrap;
+
+            flex-flow: row wrap;
+
+            /* main axis */
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: center;
+            justify-content: space-around;
+            justify-content: space-between;
+
+            /* cross axis */
+            height: 400px;
+            align-items: stretch; /* default */
+            align-items: baseline; /* pela linha de base da fonte */
+            align-items: flex-start; /* pelo início do flex-item */
+            align-items: flex-end;
+            align-items: center;
+
+            /* mais de uma linha */
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
     </style>
 </head>
 
