@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>CSS Grid #01</title>
     <style>
-        /* https://caniuse.com/#feat=css-grid */
+        /* https://cssgridgarden.com */
         
         html,
         body {
@@ -21,6 +21,62 @@
             font-size: 30px;
             border: solid 5px dodgerblue;
             background: #fff;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-columns: repeat(12, 8.33%);
+
+            /* 1fr == espaço que sobrou dos 200px + 20% */
+            grid-template-columns: 200px 20% 1fr;
+
+            grid-template-columns: repeat(11, 8%) 1fr;
+            grid-template-columns: 3fr 6fr 3fr;
+
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            
+            /*  100px para 1a linha, 1fr para 2a 
+                e a 3a e 4a linha usará só o necessário
+                para renderizar o conteúdo */
+            grid-template-rows: 100px 1fr;
+
+            /*  divide as 3 linhas restantes 
+                de forma igualitária */
+            grid-template-rows: 100px auto;
+
+            /*  acerta a numeração na ferramenta
+                de css grid inspector do firefox */
+            grid-template-rows: 100px auto auto auto;
+        }
+
+        .d8 {
+            /* inicia a partir da coluna 2 */
+            grid-column-start: 2;
+
+            grid-column-end: 4;
+
+            /*  "comece a partir da linha 2
+                e dê um span de 2 casas" */
+            grid-column-end: span 2;
+
+            grid-row-start: 3;
+            grid-row-start: span 2; /* 5 */
+        }
+
+        .d10,
+        .d11 {
+            /*  podem se sobrepor
+                nesse caso o elemento 10
+                está por baixo do elemento 11*/
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 5;
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            z-index: 10;
         }
     </style>
 </head>
